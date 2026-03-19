@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prefeitura de Cruz das Almas</title>
+
+<style>
+
+/* GERAL */
+body{
+background-color:black;
+color:white;
+font-family:Arial;
+margin:0;
+}
+
+/* HEADER */
+header{
+text-align:center;
+padding:20px;
+border-bottom:1px solid #333;
+}
+
+.top-links{
+margin-bottom:10px;
+}
+
+.top-links a{
+color:goldenrod;
+text-decoration:none;
+margin:0 10px;
+font-size:14px;
+}
+
+/* MENU */
+.menu{
+display:flex;
+justify-content:center;
+gap:30px;
+background-color:goldenrod;
+padding:15px;
+flex-wrap:wrap;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:black;
+}
+
+/* DROPDOWN */
+.dropdown{
+position:relative;
+}
+
+.dropdown-content{
+display:none;
+position:absolute;
+background:black;
+padding:10px;
+top:30px;
+}
+
+.dropdown-content a{
+display:block;
+padding:8px;
+}
+
+.dropdown:hover .dropdown-content{
+display:block;
+}
+
+/* PESQUISA */
+.pesquisa{
+text-align:center;
+margin:20px;
+}
+
+.pesquisa input{
+padding:10px;
+width:250px;
+border-radius:5px;
+border:none;
+}
+
+.pesquisa button{
+padding:10px;
+background:goldenrod;
+border:none;
+color:white;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* NOTÍCIAS */
+.noticia{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+margin:40px 20px;
+}
+
+.noticia-texto{
+flex:1;
+min-width:300px;
+text-align:left;
+}
+
+.noticia-texto h2{
+margin-bottom:15px;
+}
+
+.noticia-texto img{
+width:100%;
+border-radius:10px;
+}
+
+.noticia-video{
+flex:1;
+min-width:300px;
+display:flex;
+justify-content:center;
+}
+
+.video-box{
+width:100%;
+max-width:450px;
+aspect-ratio:16/9;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+/* GALERIA */
+.galeria{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.card-img{
+position:relative;
+overflow:hidden;
+border-radius:10px;
+}
+
+.card-img img{
+display:block;
+}
+
+.overlay{
+position:absolute;
+bottom:0;
+background:rgba(0,0,0,0.5);
+color:white;
+width:100%;
+padding:10px;
+font-size:14px;
+}
+
+/* SERVIÇOS */
+.servicos{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
+gap:20px;
+max-width:900px;
+margin:40px auto;
+}
+
+.card{
+padding:25px;
+text-align:center;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+transition:0.3s;
+display:flex;
+align-items:center;
+justify-content:center;
+height:100px;
+}
+
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 5px 15px rgba(0,0,0,0.5);
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.verde{background:#0b8f3a;}
+.azul{background:#1e73be;}
+.marrom{background:#6b3a00;}
+.amarelo{background:#a37b00;}
+.cinza{background:#6e6e6e;}
+
+/* RODAPÉ */
+footer{
+background:#111;
+padding:30px;
+margin-top:40px;
+text-align:center;
+border-top:1px solid #333;
+}
+
+footer p{
+margin:5px 0;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header> 
+
+<div class="top-links">
+<a href="https://cruzdasalmas.ba.gov.br/ouvidoria">Contatos</a>
+<a href="https://cruzdasalmas.ba.gov.br/fale-conosco">Reclame aqui</a>
+</div>
+
+<h1>Prefeitura de Cruz das Almas</h1>
+<img src="logo prefeitura.jpg" width="65" alt="logo">
+
+</header>
+
+<!-- MENU -->
+<div class="menu">
+<a href="#">Início</a>
+<a href="#">O Município</a>
+<a href="#">Serviços on-line</a>
+<a href="#">Leis sancionadas</a>
+
+<div class="dropdown">
+<a href="#">Governo</a>
+<div class="dropdown-content">
+<a href="#">Prefeito e Vice</a>
+<a href="#">Secretarias</a>
+<a href="#">Organograma</a>
+</div>
+</div>
+
+<a href="#">Serviços ao cidadão</a>
+<a href="#">Downloads</a>
+</div>
+
+<!-- PESQUISA -->
+<div class="pesquisa">
+<input type="text" placeholder="Pesquisar no site...">
+<button>Buscar</button>
+</div>
+
+<!-- NOTÍCIAS -->
+<h1 style="text-align:center;">NOTÍCIAS</h1>
+
+<div class="noticia">
+
+<div class="noticia-texto">
+<h2>Prefeitura de Cruz divulga programação de ações do Março Lilás nos Postos de Saúde</h2>
+<img src="69af18183fb19.png">
+</div>
+
+<div class="noticia-video">
+<div class="video-box">
+<iframe 
+src="https://www.youtube.com/embed/K7Y3G-JrNz4"
+style="width:100%; height:100%; border:none;"
+allowfullscreen>
+</iframe>
+</div>
+</div>
+
+</div>
+
+<!-- GALERIA -->
+<div class="galeria">
+
+<div class="card-img">
+<img src="69aed1947b9cc.jpeg" width="200">
+<div class="overlay">trator</div>
+</div>
+
+<div class="card-img">
+<img src="69aed1dca70fd.jpeg" width="400">
+<div class="overlay" style="bottom:50px;">obras</div>
+</div>
+
+</div>
+
+<!-- SERVIÇOS -->
+<h2 style="text-align:center;">Serviços</h2>
+
+<div class="servicos">
+
+<div class="card verde">PORTAL DA TRANSPARÊNCIA</div>
+<div class="card azul">DIÁRIO OFICIAL</div>
+<div class="card azul">ACESSO À INFORMAÇÃO</div>
+<div class="card marrom">PORTAL DO SERVIDOR</div>
+
+<div class="card amarelo">NOTA FISCAL ELETRÔNICA</div>
+<div class="card amarelo">CERTIDÕES NEGATIVAS</div>
+<div class="card amarelo">AUTENTICAÇÕES</div>
+<div class="card amarelo">EMISSÃO DE DAM</div>
+
+<div class="card cinza">LICITAÇÕES</div>
+<div class="card cinza">CONTRATOS</div>
+<div class="card cinza">LEGISLAÇÃO</div>
+<div class="card cinza">CONVÊNIOS</div>
+
+</div>
+
+<!-- RODAPÉ -->
+<footer>
+<p><strong>Prefeitura Municipal de Cruz das Almas</strong></p>
+<p>Praça Senador Themístocles, Centro</p>
+<p>Telefone: (75) 3621-8414</p>
+<p>© 2026 Prefeitura de Cruz das Almas</p>
+</footer>
+
+</body>
+</html>
