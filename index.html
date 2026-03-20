@@ -5,6 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<meta name="description" content="Site oficial da Prefeitura de Cruz das Almas com notícias, serviços e informações ao cidadão.">
+
 <title>Prefeitura de Cruz das Almas</title>
 
 <style>
@@ -15,6 +17,11 @@ background-color:black;
 color:white;
 font-family:Arial;
 margin:0;
+}
+/* IMAGENS GERAIS */
+img{
+max-width:100%;
+height:auto;
 }
 
 /* HEADER */
@@ -100,6 +107,10 @@ border-radius:5px;
 cursor:pointer;
 }
 
+.pesquisa button:hover{
+background:#c89b1d;
+}
+
 /* NOTÍCIAS */
 .noticia{
 display:flex;
@@ -120,8 +131,10 @@ text-align:left;
 margin-bottom:15px;
 }
 
+/* IMAGEM DA NOTÍCIA */
 .noticia-texto img{
 width:100%;
+height:auto;
 border-radius:10px;
 }
 
@@ -156,9 +169,11 @@ overflow:hidden;
 border-radius:10px;
 }
 
+/* IMAGENS DA GALERIA */
 .card-img img{
 display:block;
 }
+
 
 .overlay{
 position:absolute;
@@ -190,15 +205,13 @@ display:flex;
 align-items:center;
 justify-content:center;
 height:100px;
+text-decoration:none;
+color:white;
 }
 
 .card:hover{
 transform:translateY(-5px);
 box-shadow:0 5px 15px rgba(0,0,0,0.5);
-}
-
-.card:hover{
-transform:translateY(-5px);
 }
 
 .verde{background:#0b8f3a;}
@@ -220,31 +233,25 @@ footer p{
 margin:5px 0;
 }
 
-/* ========================= */
-/* RESPONSIVIDADE MOBILE */
-/* ========================= */
-
+/* RESPONSIVIDADE */
 @media (max-width: 768px){
 
-/* HEADER */
 header h1{
 font-size:22px;
 }
 
-/* MENU */
 .menu{
 flex-direction:column;
 align-items:center;
 gap:15px;
 }
 
-/* DROPDOWN MOBILE */
 .dropdown-content{
+display:block;
 position:static;
 text-align:center;
 }
 
-/* PESQUISA */
 .pesquisa input{
 width:80%;
 }
@@ -254,7 +261,6 @@ margin-top:10px;
 width:60%;
 }
 
-/* NOTÍCIA */
 .noticia{
 flex-direction:column;
 gap:20px;
@@ -268,7 +274,6 @@ text-align:center;
 width:100%;
 }
 
-/* GALERIA */
 .galeria{
 flex-direction:column;
 align-items:center;
@@ -276,9 +281,9 @@ align-items:center;
 
 .card-img img{
 width:90%;
+height:auto;
 }
 
-/* SERVIÇOS */
 .servicos{
 grid-template-columns:repeat(2, 1fr);
 padding:0 10px;
@@ -289,7 +294,6 @@ height:80px;
 font-size:14px;
 }
 
-/* RODAPÉ */
 footer{
 font-size:14px;
 padding:20px;
@@ -310,7 +314,8 @@ padding:20px;
 </div>
 
 <h1>Prefeitura de Cruz das Almas</h1>
-<img src="logo prefeitura.jpg" width="65" alt="logo">
+
+<img src="logo prefeitura.jpg" style="max-width:65px; width:100%;" alt="logo">
 
 </header>
 
@@ -355,6 +360,7 @@ padding:20px;
 <iframe 
 src="https://www.youtube.com/embed/K7Y3G-JrNz4"
 style="width:100%; height:100%; border:none;"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
 </div>
@@ -382,20 +388,20 @@ allowfullscreen>
 
 <div class="servicos">
 
-<div class="card verde">PORTAL DA TRANSPARÊNCIA</div>
-<div class="card azul">DIÁRIO OFICIAL</div>
-<div class="card azul">ACESSO À INFORMAÇÃO</div>
-<div class="card marrom">PORTAL DO SERVIDOR</div>
+<a href="#" class="card verde">PORTAL DA TRANSPARÊNCIA</a>
+<a href="#" class="card azul">DIÁRIO OFICIAL</a>
+<a href="#" class="card azul">ACESSO À INFORMAÇÃO</a>
+<a href="#" class="card marrom">PORTAL DO SERVIDOR</a>
 
-<div class="card amarelo">NOTA FISCAL ELETRÔNICA</div>
-<div class="card amarelo">CERTIDÕES NEGATIVAS</div>
-<div class="card amarelo">AUTENTICAÇÕES</div>
-<div class="card amarelo">EMISSÃO DE DAM</div>
+<a href="#" class="card amarelo">NOTA FISCAL ELETRÔNICA</a>
+<a href="#" class="card amarelo">CERTIDÕES NEGATIVAS</a>
+<a href="#" class="card amarelo">AUTENTICAÇÕES</a>
+<a href="#" class="card amarelo">EMISSÃO DE DAM</a>
 
-<div class="card cinza">LICITAÇÕES</div>
-<div class="card cinza">CONTRATOS</div>
-<div class="card cinza">LEGISLAÇÃO</div>
-<div class="card cinza">CONVÊNIOS</div>
+<a href="#" class="card cinza">LICITAÇÕES</a>
+<a href="#" class="card cinza">CONTRATOS</a>
+<a href="#" class="card cinza">LEGISLAÇÃO</a>
+<a href="#" class="card cinza">CONVÊNIOS</a>
 
 </div>
 
