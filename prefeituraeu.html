@@ -7,301 +7,8 @@
 
 <meta name="description" content="Site oficial da Prefeitura de Cruz das Almas com notícias, serviços e informações ao cidadão.">
 
-<title>Prefeitura de Cruz das Almas</title>
-
-<style>
-
-/* GERAL */
-body{
-background-color:black;
-color:white;
-font-family:Arial;
-margin:0;
-}
-/* IMAGENS GERAIS */
-img{
-max-width:100%;
-height:auto;
-}
-
-/* HEADER */
-header{
-text-align:center;
-padding:20px;
-border-bottom:1px solid #333;
-}
-
-.top-links{
-margin-bottom:10px;
-}
-
-.top-links a{
-color:goldenrod;
-text-decoration:none;
-margin:0 10px;
-font-size:14px;
-}
-
-/* MENU */
-.menu{
-display:flex;
-justify-content:center;
-gap:30px;
-background-color:goldenrod;
-padding:15px;
-flex-wrap:wrap;
-}
-
-.menu a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
-}
-
-.menu a:hover{
-color:black;
-}
-
-/* DROPDOWN */
-.dropdown{
-position:relative;
-}
-
-.dropdown-content{
-display:none;
-position:absolute;
-background:black;
-padding:10px;
-top:30px;
-}
-
-.dropdown-content a{
-display:block;
-padding:8px;
-}
-
-.dropdown:hover .dropdown-content{
-display:block;
-}
-
-/* PESQUISA */
-.pesquisa{
-text-align:center;
-margin:20px;
-}
-
-.pesquisa input{
-padding:10px;
-width:250px;
-border-radius:5px;
-border:none;
-}
-
-.pesquisa button{
-padding:10px;
-background:goldenrod;
-border:none;
-color:white;
-border-radius:5px;
-cursor:pointer;
-}
-
-.pesquisa button:hover{
-background:#c89b1d;
-}
-
-/* NOTÍCIAS */
-.noticia{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-margin:40px 20px;
-}
-
-.noticia-texto{
-flex:1;
-min-width:300px;
-text-align:left;
-}
-
-.noticia-texto h2{
-margin-bottom:15px;
-}
-
-/* IMAGEM DA NOTÍCIA */
-.noticia-texto img{
-width:100%;
-height:auto;
-border-radius:10px;
-}
-
-.noticia-video{
-flex:1;
-min-width:300px;
-display:flex;
-justify-content:center;
-}
-
-.video-box{
-width:100%;
-max-width:450px;
-aspect-ratio:16/9;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
-}
-
-/* GALERIA */
-.galeria{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.card-img{
-position:relative;
-overflow:hidden;
-border-radius:10px;
-}
-
-/* IMAGENS DA GALERIA */
-.card-img img{
-display:block;
-}
-
-
-.overlay{
-position:absolute;
-bottom:0;
-background:rgba(0,0,0,0.5);
-color:white;
-width:100%;
-padding:10px;
-font-size:14px;
-}
-
-/* SERVIÇOS */
-.servicos{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(180px,1fr));
-gap:20px;
-max-width:900px;
-margin:40px auto;
-}
-
-.card{
-padding:25px;
-text-align:center;
-font-weight:bold;
-border-radius:10px;
-cursor:pointer;
-transition:0.3s;
-display:flex;
-align-items:center;
-justify-content:center;
-height:100px;
-text-decoration:none;
-color:white;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
-}
-
-.verde{background:#0b8f3a;}
-.azul{background:#1e73be;}
-.marrom{background:#6b3a00;}
-.amarelo{background:#a37b00;}
-.cinza{background:#6e6e6e;}
-
-/* RODAPÉ */
-footer{
-background:#111;
-padding:30px;
-margin-top:40px;
-text-align:center;
-border-top:1px solid #333;
-}
-
-footer p{
-margin:5px 0;
-}
-
-/* RESPONSIVIDADE */
-@media (max-width: 768px){
-
-header h1{
-font-size:22px;
-}
-
-.menu{
-flex-direction:column;
-align-items:center;
-gap:15px;
-}
-
-.dropdown-content{
-display:block;
-position:static;
-text-align:center;
-}
-
-.pesquisa input{
-width:80%;
-}
-
-.pesquisa button{
-margin-top:10px;
-width:60%;
-}
-
-.noticia{
-flex-direction:column;
-gap:20px;
-}
-
-.noticia-texto{
-text-align:center;
-}
-
-.noticia-video{
-width:100%;
-}
-
-.galeria{
-flex-direction:column;
-align-items:center;
-}
-
-.card-img img{
-width:90%;
-height:auto;
-}
-
-.servicos{
-grid-template-columns:repeat(2, 1fr);
-padding:0 10px;
-}
-
-.card{
-height:80px;
-font-size:14px;
-}
-
-footer{
-font-size:14px;
-padding:20px;
-}
-
-}
-</style>
-
+<title>prefeitura de cruz das Almas</title>
+ <link rel="stylesheet" href="prefeituraeu.css">
 </head>
 
 <body>
@@ -312,10 +19,20 @@ padding:20px;
 <a href="https://cruzdasalmas.ba.gov.br/ouvidoria">Contatos</a>
 <a href="https://cruzdasalmas.ba.gov.br/fale-conosco">Reclame aqui</a>
 </div>
+<div class="login">
+    <h2>login</h2>
+    <form action="login.php" method="POST">
+    <input type="text" name="usuario" placeholder="Usuário" required><br><br>
+    
+    <input type="password" name="senha" placeholder="Senha" required><br><br>
+    
+    <button type="submit">Entrar</button>
+</form>
+</div>
 
 <h1>Prefeitura de Cruz das Almas</h1>
 
-<img src="logo prefeitura.jpg" style="max-width:65px; width:100%;" alt="logo">
+<img src="brasao-cruz-das-almas.png" style="max-width: 300px; width: 300px;" alt="logo">
 
 </header>
 
@@ -372,13 +89,18 @@ allowfullscreen>
 <div class="galeria">
 
 <div class="card-img">
-<img src="69aed1947b9cc.jpeg" width="200">
-<div class="overlay">trator</div>
+    <img src="69aed1947b9cc.jpeg">
+    <div class="overlay">trator</div>
 </div>
 
 <div class="card-img">
-<img src="69aed1dca70fd.jpeg" width="400">
-<div class="overlay" style="bottom:50px;">obras</div>
+    <img src="69aed1dca70fd.jpeg">
+    <div class="overlay">obras</div>
+</div>
+
+<div class="card-img">
+    <img src="69bd904e0b76f.jpeg">
+    <div class="overlay">sementes</div>
 </div>
 
 </div>
@@ -388,20 +110,20 @@ allowfullscreen>
 
 <div class="servicos">
 
-<a href="#" class="card verde">PORTAL DA TRANSPARÊNCIA</a>
-<a href="#" class="card azul">DIÁRIO OFICIAL</a>
-<a href="#" class="card azul">ACESSO À INFORMAÇÃO</a>
-<a href="#" class="card marrom">PORTAL DO SERVIDOR</a>
+<a href="https://transparencia.cruzdasalmas.ba.gov.br/index.php" class="card verde">PORTAL DA TRANSPARÊNCIA</a>
+<a href="https://www.cruzdasalmas.ba.gov.br/diariooficial" class="card azul">DIÁRIO OFICIAL</a>
+<a href="https://cruzdasalmas.ba.gov.br/acessoainformacao" class="card azul">ACESSO À INFORMAÇÃO</a>
+<a href="https://cruzdasalmas.ba.gov.br/servidor" class="card marrom">PORTAL DO SERVIDOR</a>
 
-<a href="#" class="card amarelo">NOTA FISCAL ELETRÔNICA</a>
-<a href="#" class="card amarelo">CERTIDÕES NEGATIVAS</a>
-<a href="#" class="card amarelo">AUTENTICAÇÕES</a>
-<a href="#" class="card amarelo">EMISSÃO DE DAM</a>
+<a href="https://cruzdasalmasba.webiss.com.br" class="card amarelo">NOTA FISCAL ELETRÔNICA</a>
+<a href="https://www.fisco.net.br:8443/wrb/open.do?sys=FSC" class="card amarelo">CERTIDÕES NEGATIVAS</a>
+<a href="https://www.fisco.net.br:8443/wrb/open.do?sys=FSC" class="card amarelo">AUTENTICAÇÕES</a>
+<a href="https://www.fisco.net.br:8443/wrb/open.do?sys=FSC" class="card amarelo">EMISSÃO DE DAM</a>
 
-<a href="#" class="card cinza">LICITAÇÕES</a>
-<a href="#" class="card cinza">CONTRATOS</a>
-<a href="#" class="card cinza">LEGISLAÇÃO</a>
-<a href="#" class="card cinza">CONVÊNIOS</a>
+<a href="https://acessoainformacao.cruzdasalmas.ba.gov.br/licitacao" class="card cinza">LICITAÇÕES</a>
+<a href="https://acessoainformacao.cruzdasalmas.ba.gov.br/contratos" class="card cinza">CONTRATOS</a>
+<a href="https://acessoainformacao.cruzdasalmas.ba.gov.br/legislacao" class="card cinza">LEGISLAÇÃO</a>
+<a href="#"class="card cinza">CONVÊNIOS</a>
 
 </div>
 
